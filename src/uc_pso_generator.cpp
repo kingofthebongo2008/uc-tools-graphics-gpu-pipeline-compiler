@@ -1137,7 +1137,7 @@ namespace uc
 
         unit_data generate_graphics_pso_unit(const graphics_parsed_unit& p, const std::string& main_function, const std::string& header_name)
         {
-            namespace fs            = std::experimental::filesystem;
+            namespace fs            = std::filesystem;
             const auto r            = referenced(p);
             const auto& pipe        = graphics_pipeline_state_desc(main_function, r);
 
@@ -1240,7 +1240,7 @@ namespace uc
 
         unit_data generate_compute_pso_unit(const compute_parsed_unit& p, const std::string& main_function, const std::string& header_name)
         {
-            namespace fs = std::experimental::filesystem;
+            namespace fs = std::filesystem;
             const auto r = referenced(p);
             const auto& pipe = compute_pipeline_state_desc(main_function, r);
 
