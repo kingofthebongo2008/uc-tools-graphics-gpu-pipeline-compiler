@@ -2,17 +2,16 @@ version: 1.0.{build}
 pull_requests:
   do_not_increment_build_number: true
 image: Visual Studio 2019
-clone_folder: c:\projects
+clone_folder: c:\projects-9g025x1owgfi8ejn
 install:
-  - cd c:\projects
-  - git submodule update --init --recursive
+  - cd c:\projects-9g025x1owgfi8ejn
 build_script:
 - cmd: >-
-    nuget restore c:\projects\build\build.sln
+    nuget restore c:\projects-9g025x1owgfi8ejn\build\build.sln
 
-    msbuild c:\projects\build\build.sln /p:Configuration="Release" /verbosity:quiet
+    msbuild c:\projects-9g025x1owgfi8ejn\build\build.sln /p:Configuration="Release" /verbosity:quiet
 
-    msbuild c:\projects\build\build.sln /p:Configuration="Release-uc-backend-public" /verbosity:quiet
+    msbuild c:\projects-9g025x1owgfi8ejn\build\build.sln /p:Configuration="Release-uc-backend-public" /verbosity:quiet
 
 before_package:
 - ps: >-
